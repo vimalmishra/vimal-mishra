@@ -1,0 +1,50 @@
+<HTML>
+	<HEAD>
+		<TITLE> My second page title </TITLE>
+		<script type="text/JavaScript">
+
+			function verify_addition() {
+				var first_no_value_str = document.getElementById("first_no").value;
+				if (first_no_value_str == "") {
+					alert("Can not be blank");
+					return;
+				}
+				var second_no_value_str = document.getElementById("second_no").value;
+				
+				var result_no_value_str = document.getElementById("result_no").value;
+				var result_no_value_str_integer = parseInt(result_no_value_str);
+				
+				var result_entered_integer =  parseInt(first_no_value_str) + parseInt(second_no_value_str);
+				
+				if (result_entered_integer == result_no_value_str_integer)
+					alert("Correct! WelDone");
+				else
+					alert("Sorry");
+			}
+		</script>
+		
+		<script language="javascript" type="text/javascript">
+			function playSound(soundfile) {
+				alert(soundfile);
+				document.getElementById("dummy").innerHTML= "<embed src=\"" + soundfile + "\" hidden =\"true\" autostart=\"true\" loop=\"false\" />";
+			}
+		</script>
+	</HEAD>
+	
+	<BODY>
+		<span id="dummy"></span>
+		<H1> Addition  </H1>
+
+		</br>
+		SNO 1. <input type="text" id="first_no" size=5 value=4 /> +  <input type="text" id="second_no" size=5 value=6 /> = <input type="text" id="result_no" size=6/>
+		<br/>
+		SNO 2. <input type="text" id="first_no" size=5 value=7 /> +  <input type="text" id="second_no" size=5 value=16 /> = <input type="text" id="result_no" size=6/>
+		<br/>
+		SNO 3. <input type="text" id="first_no" size=5 value=12 /> +  <input type="text" id="second_no" size=5 value=7 /> = <input type="text" id="result_no" size=6/>
+		
+		<br/>
+		<br/>
+		
+		<input type="button" onclick="playSound('D:\\songs\\ARTISTS\\temp\\Track01.mp3')" value="Submit">
+	</BODY>
+</HTML>
